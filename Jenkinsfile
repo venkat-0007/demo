@@ -1,10 +1,14 @@
-pipeline {
-    agent any
-    stages {
-        stage('Docker build') {
-            steps {
-                sh 'docker build -t hello-world:latest .'
-            }
-        }
-    }
+pipeline {	
+	agent {
+		docker {
+			image 'ubuntu:latest'
+		}
+	}
+    stages {	
+        stage('Build') {	
+            steps {	
+                sh 'cat /etc/lsb-release'
+            }	
+        }			
+    }	
 }
