@@ -1,11 +1,10 @@
-pipeline {
-    agent {
-        docker { image 'node:16.13.1-alpine' }
-    }
+pipeline { 
+    agent any
     stages {
-        stage('Test') {
-            steps {
-                sh 'node --version'
+        stage('Build') { 
+            steps { 
+                sh 'jenkins --version'
+                echo "jenkins version display stage" 
             }
         }
     }
