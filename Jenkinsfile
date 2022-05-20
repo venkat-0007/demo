@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('Build') { 
             steps { 
-                sh 'ls'
-                echo "jenkins version display stage" 
+                sh 'python3 hlo.py'
+                echo "python execution" 
             }
         }
     }
