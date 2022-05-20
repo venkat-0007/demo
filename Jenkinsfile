@@ -1,9 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('Docker') {
+        stage('Docker build') {
             steps {
-                sh 'docker --version'
+                withDocker(docker : 'myDocker'){
+                    sh 'docker --version'
+                }
             }
         }
     }
