@@ -1,12 +1,11 @@
-pipeline { 
+pipeline {
     agent {
-        dockerfile true
+        docker { image 'node:16.13.1-alpine' }
     }
     stages {
-        stage('Build') { 
-            steps { 
-                sh 'docker --version'
-                echo "docker version display stage" 
+        stage('Test') {
+            steps {
+                sh 'node --version'
             }
         }
     }
