@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps { 
-                sh 'jenkins --version'
+                sh 'pwd'
                 echo "jenkins version display stage" 
             }
         }
