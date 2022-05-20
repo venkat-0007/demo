@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Build') { 
             steps { 
-                echo "build stage" 
+                sh 'docker --version'
+                echo "docker version display stage" 
             }
         }
         stage('Test'){
