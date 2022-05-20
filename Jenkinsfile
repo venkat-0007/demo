@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Docker') {
             steps {
-                sh 'echo --version'
+                sh 'docker --version'
             }
         }
     }
