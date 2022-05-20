@@ -1,11 +1,13 @@
 pipeline {
-    agent {
-        docker { image 'node:16.13.1-alpine' }
-    }
+    agent any
     stages {
-        stage('Test') {
+        stage('Initialize'){
+        def dockerHome = tool 'Docker'
+        env.PATH = "${dockerHome}/bin:${env.PATH}"
+    }
+        stage('Docker') {
             steps {
-                sh 'node --version'
+                sh 'docker --version'
             }
         }
     }
