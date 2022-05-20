@@ -3,9 +3,7 @@ pipeline {
     stages {
         stage('Docker build') {
             steps {
-                withDocker(docker : 'myDocker'){
-                    sh 'docker --version'
-                }
+                sh 'docker build -t hello-world:latest .'
             }
         }
     }
