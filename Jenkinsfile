@@ -1,14 +1,10 @@
-pipeline {	
-	agent {
-		myDocker {
-			image 'ubuntu:latest'
-		}
-	}
-    stages {	
-        stage('Build') {	
-            steps {	
-                sh 'cat /etc/lsb-release'
-            }	
-        }			
-    }	
+pipeline {
+    agent any
+    stages {
+        stage('sample') {
+            steps {
+                sh 'cat Dockerfile'
+            }
+        }
+    }
 }
