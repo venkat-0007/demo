@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('sample') {
             steps {
-                sh 'docker run hello-world'
+                sh 'docker pull hello-world'
             }
         }
     }
