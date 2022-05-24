@@ -1,8 +1,5 @@
 pipeline {
-    agent any
-    tools {
-    'org.jenkinsci.plugins.docker.commons.tools.DockerTool' 'myDocker'
-  }
+    agent any   
     stages {
         stage('pull') {
             steps {
