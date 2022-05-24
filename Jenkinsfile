@@ -4,9 +4,9 @@ pipeline {
     'org.jenkinsci.plugins.docker.commons.tools.DockerTool' 'myDocker'
   }
     stages {
-        stage('sample') {
+        stage('pull') {
             steps {
-                sh 'docker pull hello-world'
+                sh 'docker pull venkatrobin/flask-demo:v1'
             }
         }
     }
