@@ -14,5 +14,10 @@ pipeline {
                 sh 'docker run -p 8082:5000 -d --name calc_v1 venkatrobin/flask-demo:v1'
             }
         }
+         stage('push'){
+            steps{
+                sh 'docker push venkatrobin/flask-demo:v2'
+            }
+        }
     }
 }
