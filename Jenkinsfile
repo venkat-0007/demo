@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('sample') {
             steps {
-                sh 'docker --version'
+                sh 'docker run hello-world'
             }
         }
     }
