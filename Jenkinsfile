@@ -11,7 +11,6 @@ pipeline{
         }
         stage('tag'){
             steps{
-                sh 'docker tag venkatrobin/calc_v1:cv1.0'
                 sh 'docker push venkatrobin/calc_v1:cv1.0'
             }
         }
