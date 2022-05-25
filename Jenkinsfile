@@ -1,17 +1,10 @@
-pipeline {
-    tools {
-    'org.jenkinsci.plugins.docker.commons.tools.DockerTool' 'myDocker'
-  }
-  stages{
-    stage ('Build') {
-        agent {
-            dockerfile {
-            filename 'Dockerfile'
-        }
-        }
-        steps {
+pipeline{
+    agent{
+        Dockerfile true
+    }
+    stages{
+        stage('helo'){
             sh 'cat Dockerfile'
         }
     }
-}
 }
