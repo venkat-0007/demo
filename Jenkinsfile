@@ -11,7 +11,7 @@ pipeline{
         }
         stage('push'){
             steps{
-                sh 'docker push venkatrobin/calc_v1:1.0'
+                sh 'docker push calc_v1:latest'
             }
         }
     }
