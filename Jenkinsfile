@@ -14,7 +14,7 @@ pipeline{
         }
         stage('docker_login'){
             steps{
-                sh 'echo 'hi' | docker login -u $DOCKER_USER -p $DOCKER_PASSWORD'
+                sh 'docker login -u $DOCKER_USER -p $DOCKER_PASSWORD'
             }
         }
     }
