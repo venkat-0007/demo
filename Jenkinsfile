@@ -11,7 +11,7 @@ pipeline{
         }
         stage('docker_login'){
             steps{
-                sh 'docker push venkatrobin/calc_v1:cv1.0'
+                sh 'docker push venkatrobin/venkatrepo:cv1.0'
                  }
             }
         }
