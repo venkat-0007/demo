@@ -4,10 +4,15 @@ pipeline{
     'org.jenkinsci.plugins.docker.commons.tools.DockerTool' 'myDocker'
   }
     stages{
-        stage('helo'){
+        stage('build'){
             steps{
                 sh 'docker build -t calc_v1 .'
             }
         }
-}
+        stage('push'){
+            steps{
+                sh 'docker push -t venkatrobin/calc_v1:1.0'
+            }
+        }
+    }
 }
