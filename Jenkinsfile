@@ -1,5 +1,7 @@
 pipeline{
-    agent any
+    agent {
+        dockerfile true
+    }
     tools {
     'org.jenkinsci.plugins.docker.commons.tools.DockerTool' 'myDocker'
   }
