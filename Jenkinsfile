@@ -13,14 +13,9 @@ pipeline{
         }
         stage('docker_login'){
             steps{
-                dockerImage='docker push venkatrobin/calc_v1:cv1.0'
-                 script {
-                docker.withRegistry( '', registryCredential ) {
-                dockerImage.push()
-                }
-            }
-        }
+                sh 'docker push venkatrobin/calc_v1:cv1.0'
+                 }
             }
         }
     }
-}
+
