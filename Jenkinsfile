@@ -4,7 +4,9 @@ pipeline{
     }
     stages{
         stage('helo'){
-            sh 'cat Dockerfile'
+            steps{
+                sh 'cat Dockerfile'
+            }
         }
     }
 }
