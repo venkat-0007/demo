@@ -3,9 +3,9 @@ pipeline{
     tools {
     'org.jenkinsci.plugins.docker.commons.tools.DockerTool' 'myDocker'
   }
+   agent {
+      dockerfile true
     stages{
-        agent {
-            dockerfile true
         stage('helo'){
             steps{
                 sh 'cat Dockerfile'
