@@ -1,7 +1,5 @@
 pipeline{
     agent any
-     environment {
-        registryCredential = 'docker-login'
     tools {
     'org.jenkinsci.plugins.docker.commons.tools.DockerTool' 'myDocker'
   }
@@ -17,5 +15,5 @@ pipeline{
                  }
             }
         }
-    }
+}
 
