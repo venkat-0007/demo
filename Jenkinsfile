@@ -12,7 +12,7 @@ pipeline{
                 sh 'docker build -t venkatrobin/calc_v1:cv1.0 .'
             }
         }
-        stage('docker_login'){
+        stage('docker_login_push'){
             steps{
                 sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR -p $DOCKERHUB_CREDENTIALS_PSW'
                 sh 'docker push venkatrobin/calc_v1:cv1.0'
