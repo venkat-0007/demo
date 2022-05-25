@@ -1,5 +1,7 @@
 pipeline{
     agent any
+     environment {
+        registryCredential = 'docker-login'
     tools {
     'org.jenkinsci.plugins.docker.commons.tools.DockerTool' 'myDocker'
   }
@@ -11,7 +13,12 @@ pipeline{
         }
         stage('docker_login'){
             steps{
-                sh 'docker push venkatrobin/calc_v1:cv1.0'
+                dockerImage='docker push venkatrobin/calc_v1:cv1.0'
+                 script {
+                docker.withRegistry( '', registryCredential ) {
+                dockerImage.push()
+            }
+        }
             }
         }
     }
