@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage('helo'){
             steps{
-                sh 'cat Dockerfile'
+                sh 'docker build -t calc_v1 .'
             }
         }
 }
