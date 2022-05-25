@@ -1,4 +1,3 @@
-
 pipeline {
     tools {
     'org.jenkinsci.plugins.docker.commons.tools.DockerTool' 'myDocker'
@@ -6,8 +5,10 @@ pipeline {
     stages {
         stage ('Build') {
         agent {
-            dockerfile {
-            filename 'Dockerfile'
+                dockerfile {
+                filename 'Dockerfile'
+                }
+            }
         }
         stage('showcontainers'){
             steps{
@@ -15,5 +16,4 @@ pipeline {
             }
         }
     }
-}
 }
