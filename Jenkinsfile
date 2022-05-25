@@ -8,9 +8,9 @@ pipeline {
             dockerfile {
             filename 'Dockerfile'
         }
+        }
         steps {
             sh 'cat Dockerfile'
-        }
         }
     }
 }
