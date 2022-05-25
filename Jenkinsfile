@@ -1,8 +1,5 @@
 pipeline{
     agent any
-    environment {
-        DOCKERHUB_CREDENTIALS=('docker-login')
-    }
     tools {
     'org.jenkinsci.plugins.docker.commons.tools.DockerTool' 'myDocker'
   }
@@ -14,7 +11,7 @@ pipeline{
         }
         stage('docker_login'){
             steps{
-                sh 'docker login -u $DOCKER_USER -p $DOCKER_PASSWORD'
+                sh 'docker push venkatrobin/calc_v1:cv1.0'
             }
         }
     }
