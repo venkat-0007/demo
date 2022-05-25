@@ -6,12 +6,13 @@ pipeline{
     stages{
         stage('build'){
             steps{
-                sh 'docker build -t calc_v1 .'
+                sh 'docker build -t venkatrobin/calc_v1:cv1.0 .'
             }
         }
-        stage('push'){
+        stage('tag'){
             steps{
-                sh 'docker push calc_v1:latest'
+                sh 'docker tag venkatrobin/calc_v1:cv1.0'
+                sh 'docker push venkatrobin/calc_v1:cv1.0'
             }
         }
     }
