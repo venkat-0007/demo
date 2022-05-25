@@ -2,18 +2,17 @@ pipeline {
     tools {
     'org.jenkinsci.plugins.docker.commons.tools.DockerTool' 'myDocker'
   }
-    stages {
-        stage ('Build') {
+  stages{
+    stage ('Build') {
         agent {
-                dockerfile {
-                filename 'Dockerfile'
-                }
-            }
+            dockerfile {
+            filename 'Dockerfile'
         }
-        stage('showcontainers'){
-            steps{
-                sh 'docker ps'
-            }
+        steps {
+            sh 'cat Dockerfile'
         }
+
     }
+    }
+}
 }
