@@ -1,13 +1,15 @@
 
 pipeline {
-    agent any 
+    agent {
+        dockerfile true
+    }
     tools {
     'org.jenkinsci.plugins.docker.commons.tools.DockerTool' 'myDocker'
   }
     stages {
         stage('run') {
             steps {
-                sh 'docker run hello-world:latest'
+                sh 'cat Dockerfile'
             }
         }
         stage('showcontainers'){
