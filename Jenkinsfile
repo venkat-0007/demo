@@ -19,7 +19,9 @@ pipeline{
                 }
             }
         stage('trigger_another_job'){
+            steps{
             build 'post-build-docker-run'
+            }
         }
       }
 }
