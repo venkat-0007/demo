@@ -18,6 +18,9 @@ pipeline{
                 sh 'docker push venkatrobin/calc_v1:cv1.0'
                 }
             }
+        stage('trigger_another_job'){
+            build 'post-build-docker-run'
+        }
         }
 }
 
