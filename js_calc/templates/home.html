@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>home</title>
+        <link rel="stylesheet" href="{{url_for('static',filename= 'css/style.css')}}">
+        <script type="text/javascript" src="{{url_for('static',filename= 'script/script.js')}}"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+        
+    </head>
+    <body>
+        <div class="bg-container">
+          <div class="container d-flex flex-row justify-content-center">
+            <div class="row">
+             <div class="col-5">
+               <div class="calc-container d-flex flex-column mt-5">
+                <h1 class="heading text-center">Version 2 JS Calculator</h1>
+                 <div class="display-div">
+                    <form name="calcForm">
+                      <input class="display-area" name="textview">
+                    </form>
+                 </div>
+
+                 <div class="btns-container d-flex flex-row">
+                  <div class="num-btns-container mt-2 mb-2">
+                    <input class = "btn btn-dark" type = "button" value = "CE" onclick = "calcForm.textview.value = ' ' " >
+                    <input  class = "btn btn-danger" type = "button" value = "B" onclick = "backspace()" >  
+                    <input type ="button" class="btn btn-light" value="1" onclick="calc(1)">
+                    <input type ="button" class="btn btn-light" value="2"  onclick="calc(2)">
+                    <input type ="button" class="btn btn-light" value="3"  onclick="calc(3)">
+                    <input type ="button" class="btn btn-light" value="4"  onclick="calc(4)">
+                    <input type ="button" class="btn btn-light" value="5"  onclick="calc(5)">
+                    <input type ="button" class="btn btn-light" value="6"  onclick="calc(6)">
+                    <input type ="button" class="btn btn-light" value="7"  onclick="calc(7)">
+                    <input type ="button" class="btn btn-light" value="8"  onclick="calc(8)">
+                    <input type ="button" class="btn btn-light" value="9"  onclick="calc(9)">
+                    <input type ="button" class="btn btn-light" value="0"  onclick="calc(0)">
+                    <input class = "btn btn-light" type = "button" value = "." onclick = "calc('.')"> 
+                  </div>
+                  <div class="operation-btns-container mt-2 mb-2">
+                    <input type ="button" class="btn btn-light" value="+"  onclick="calc('+')">
+                    <input type ="button" class="btn btn-light" value="-"  onclick="calc('-')">
+                    <input type ="button" class="btn btn-light" value="*"  onclick="calc('*')">
+                    <input type ="button" class="btn btn-light" value="/"  onclick="calc('/')">
+                    <input type ="button" class="btn btn-light" value="%"  onclick="calc('%')">
+
+                    <input type ="button" class="btn btn-success equals-btn" value="="  onclick="equal()">
+                  </div>
+                 </div>
+               </div>
+             </div>
+            </div>
+
+          </div>
+        </div>
+    </body>
+</html>
