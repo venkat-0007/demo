@@ -1,4 +1,4 @@
-FROM python:3.8.10
+FROM python:3.8-slim-buster
 WORKDIR /flask-demo
 ADD . /flask-demo/
 RUN pip install -r requirements.txt
