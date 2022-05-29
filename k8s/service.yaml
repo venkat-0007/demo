@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: calc_service
 spec:
+  type: LoadBalancer
   selector:
     app: calc_app
   ports:
