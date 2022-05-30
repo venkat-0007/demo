@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: calc_app
+  name: calc-app
 spec:
   selector:
     matchLabels:
-      app: calc_app
+      app: calc-app
   template:
     metadata:
       labels:
-        app: calc_app
+        app: calc-app
     spec:
       containers:
-      - name: calc_app
+      - name: calc-app
         image: venkatrobin/flask-demo:v1
         resources:
           limits:
