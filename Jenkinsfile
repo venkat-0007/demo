@@ -3,9 +3,6 @@ pipeline{
     environment{
         DOCKERHUB_CREDENTIALS=credentials('docker-jenkins-token')
     }
-    tools {
-    'org.jenkinsci.plugins.docker.commons.tools.DockerTool' 'myDocker'
-  }
     stages{
         stage('build'){
             steps{
@@ -18,9 +15,9 @@ pipeline{
                 sh 'docker push venkatrobin/calc_v1:cv1.0'
                 }
             }
-        stage('trigger_another_job'){
+        stage('display_image'){
             steps{
-            build 'post-build-docker-run'
+            sh 'docker images'
             }
         }
       }
