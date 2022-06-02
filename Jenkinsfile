@@ -1,5 +1,8 @@
 pipeline{
     agent any
+    tools {
+    'org.jenkinsci.plugins.docker.commons.tools.DockerTool' 'myDocker'
+  }
     environment{
         DOCKERHUB_CREDENTIALS=credentials('docker-jenkins-token')
     }
