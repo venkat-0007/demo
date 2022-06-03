@@ -23,6 +23,11 @@ pipeline{
             sh 'docker images'
             }
         }
+        stage('build-another-job'){
+            steps {
+                build 'docker-postbuild-run'
+            }
+        }
       }
 }
 
