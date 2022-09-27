@@ -1,7 +1,9 @@
 FROM node
 
-RUN git clone https://github.com/phillies/vue_example.git /opt/vue_example
+RUN git clone https://github.com/venkat-0007/demo.git
 WORKDIR /opt/vue_example
 RUN npm install
 
-CMD ["npm", "run", "serve"]
+RUN npm build
+
+CMD ["npm", "run", "server"]
